@@ -1,14 +1,10 @@
-It’s solution for functionality that calculates premium for the policy which contains objects.
-Objects could contain sub-objects.
+Interface PremiumCalculator.java provides method "calculate" and return necessary premium for the policy.
 
-Interface PremiumCalculator.java provides method "calculate" which accepts policy, with all internal
-calculations and return necessary premium for the policy.
-
-Class PremiumCalculatorImpl.java ensures all necessary methods to calculate premium independently of
-list of supported risks.
+Class PremiumCalculatorImpl.java ensures to calculate premium.
+Risks are calculated independently in their own private methods.
 
 To expand types of supported risks class RiskCoefficientSelection.java is created.
 
-Class GetCoefficientOfFireRisk and GetCoefficientOfTheftRisk implements interface
+Class CoefficientOfFireRisk and CoefficientOfTheftRisk implements interface
 GetCoefficientOfRiskType.java and provides easy way to change conditions of risks calculations and extend
 implementation for new risk types.
